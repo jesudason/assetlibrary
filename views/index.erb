@@ -1,0 +1,12 @@
+<section class="head">
+	<a href="/asset/new">Post New Graphic</a>
+</section>
+<section class="layout">
+	<% @dishes.each do |dish| %>
+
+		<div class="dishes">
+			<h1><%= dish.name %></h1>
+			<a href="/dishes/<%= dish.id %>"><img src="<%= dish.image_url %>"></a>
+		</div>
+	<% end %>
+</section>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GAMESTAGRAM</title>
+  <link rel='stylesheet' href='/stylesheets/main.css'>
+</head>
+<body>
+	<% if logged_in? %>
+		logged in as <%= current_user.username %>
+		<form action="/session" method="post">
+			<input type="hidden" name="_method" value="delete">
+				<button>logout</button>
+		</form>
+	<% end %>
+	<h1>Game Art Library</h1>
+  	<%= yield %>
+	<nav>
+		<ul>
+			<li>search</li>
+			<li>profile</li>
+			<li>home</li>
+		</ul>
+	</nav>
+</body>
+</html>
