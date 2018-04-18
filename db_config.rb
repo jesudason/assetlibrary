@@ -1,5 +1,5 @@
 options = {
-	adapter: 'postgres'
+	adapter: 'postgres',
 	database: 'dbname'
 }
 
