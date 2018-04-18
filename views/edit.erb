@@ -1,0 +1,10 @@
+<form action="/assets/<%= @asst['id'] %>" method="post">
+	<input type="hidden" name="_method" value="put">
+	<label for="">name</label>
+	<input name="name" type="text" value="<%= @asset['name']%>">
+	<label for="">asset description</label>
+	<input name="description" type="text" value="<%= @asset['description']%>">
+	<label for="">file upload</label>
+	<!-- some way to upload file -->
+	<button>update</button>
+</form>
