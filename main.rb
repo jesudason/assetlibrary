@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'active_record'
+require 'cloudinary'
 require_relative 'db_config'
 require_relative 'models/asset'
 require_relative 'models/comment'
