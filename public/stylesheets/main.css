@@ -190,5 +190,10 @@ textarea {
 .dancing_baby {
 	float: right;
 }
-
+.lost {
+	background-image: url("https://i.imgur.com/OL8H7cM.gif");
+	height: 100vh;
+	color: white;
+	text-align: right;
+}
 

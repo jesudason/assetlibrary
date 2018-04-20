@@ -47,7 +47,7 @@ post '/session' do
 		session[:user_id] = user.id
 		redirect to("/profile/#{current_user.username}")
 	else
-		erb :index
+		redirect to('/')
 	end
 end
 
@@ -117,4 +117,8 @@ end
 
 get '/chat' do
 	erb :chat
+end
+
+get '/lost' do
+	erb :lost
 end
