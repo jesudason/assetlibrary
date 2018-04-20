@@ -192,8 +192,15 @@ textarea {
 }
 .lost {
 	background-image: url("https://i.imgur.com/OL8H7cM.gif");
+	opacity: 0.9;
 	height: 100vh;
+	font-family: 'Space Mono', monospace;	
 	color: white;
-	text-align: right;
+	text-align: center;
+	font-size: 2em;
+}
+.lost > a {
+	font-family: 'Space Mono', monospace;	
+	color: white;
 }
 

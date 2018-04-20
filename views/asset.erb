@@ -17,9 +17,7 @@
 <% end %>
 
 <p><%= @asset.description %></p>
-<a href="<%= @asset.asset_file.url %>" download>
-
-Download Artwork</a>
+<a href="<%= @asset.asset_file%>" download> Download Artwork</a>
 
 <a href="/asset/<%= @asset.id %>/edit">edit</a>
 <form action="/comments" method="post">

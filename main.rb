@@ -119,6 +119,7 @@ get '/chat' do
 	erb :chat
 end
 
-get '/lost' do
-	erb :lost
+not_found do
+  status 404
+  erb :lost
 end
