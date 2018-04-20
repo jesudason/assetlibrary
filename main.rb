@@ -1,11 +1,9 @@
 require 'sinatra'
-require 'sinatra/reloader'
 require 'active_record'
 require_relative 'db_config'
 require_relative 'models/asset'
 require_relative 'models/comment'
 require_relative 'models/user'
-require 'pry'
 enable :sessions
 
 helpers do
@@ -100,7 +98,6 @@ post '/asset' do
 end	
 
 get '/asset/:id' do
-	# binding.pry
 	@asset = Asset.find_by(id: params[:id] )
 	@user = User.find_by(id: @asset.user_id)
 	@comments = Comment.all
