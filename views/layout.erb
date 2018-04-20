@@ -12,6 +12,7 @@
 		<a href="/">Home</a>
 		<a href="/profile/<%= current_user.username %>"">My Profile</a>
 		<a href="/asset/new">Post New Graphic</a>
+		<a href="/chat">Chat</a>
 		<a class="current_user">logged in as <%= current_user.username %></a>
 	<% else %>
 		<form class="login" action="/session" method="post">
@@ -26,11 +27,14 @@
 </div>
 <div class="header">
 	<h1 class="title">Game Art Library</h1>
-	<form action="/session" method="post">
-		<input type="hidden" name="_method" value="delete">
-		<button class="logout"><p>logout</p></button>
-	</form>
+	<% if logged_in? %>
+		<form action="/session" method="post">
+			<input type="hidden" name="_method" value="delete">
+			<button class="logout"><p>logout</p></button>
+		</form>
+	<% end %>
 </div>
   	<%= yield %>
+
 </body>
 </html>

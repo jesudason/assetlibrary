@@ -124,7 +124,6 @@ form {
 	font-size: 12px;
 }
 
-
 .register {
 	float: right;
 }
@@ -139,11 +138,17 @@ form {
 div {
 	padding: 20px;
 }
+
 input {
 	margin-left: 10px;	
 	height: 2.5em;
+	width: 200px;
+	font-size: 12px;
+	font-family: 'Work Sans', sans-serif;
+	padding-left: 12px;
 }
-div > input {
+
+div > input, textarea {
 	margin-right: 1.5em;	
 	width: 45%;
 	position: absolute;
@@ -151,8 +156,7 @@ div > input {
 }
 
 @media (min-width: 700px) {
-	div > input {
-		margin-right: 1.5em;	
+	div > input, textarea {
 		width: 60%;
 		position: absolute;
 		right: 0;
@@ -161,8 +165,7 @@ div > input {
 }
 
 @media (min-width: 1000px) {
-	div > input {
-		margin-right: 1.5em;	
+	div > input, textarea {
 		width: 70%;
 		position: absolute;
 		right: 0;
@@ -171,8 +174,7 @@ div > input {
 }
 
 @media (min-width: 1300px) {
-	div > input {
-		margin-right: 1.5em;	
+	div > input, textarea {
 		width: 80%;
 		position: absolute;
 		right: 0;
@@ -180,6 +182,13 @@ div > input {
 	}	
 }
 
+textarea {
+	border: none
 
+}
+
+.dancing_baby {
+	float: right;
+}
 
 

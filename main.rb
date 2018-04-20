@@ -1,10 +1,17 @@
 require 'sinatra'
 require 'active_record'
 require 'cloudinary'
+
 require_relative 'db_config'
 require_relative 'models/asset'
 require_relative 'models/comment'
 require_relative 'models/user'
+
+if Sinatra::Application.settings.development? 
+	require 'sinatra/reloader'
+	require 'pry'
+end
+
 enable :sessions
 
 helpers do
@@ -20,6 +27,7 @@ end
 get '/' do
 	@assets = Asset.all 
 	erb :index
+	# binding.pry
 end
 
 post '/' do
@@ -32,14 +40,9 @@ get '/register' do
 	erb :register
 end
 
-get '/login' do
-	erb :login
-end
-
 post '/session' do
-	# check database for email
 	user = User.find_by(email: params[:email])
-
+	# binding.pry
 	if user && user.authenticate(params[:password])
 		session[:user_id] = user.id
 		redirect to("/profile/#{current_user.username}")
@@ -79,6 +82,7 @@ post '/comments' do
 	comment.asset_id = params[:asset_id]
 	comment.user_id = current_user.id
 	comment.save
+	@comments = Comment.where(asset_id: params[:asset_id])
 	redirect to("/asset/#{params[:asset_id]}")
 end
 
@@ -101,11 +105,16 @@ end
 get '/asset/:id' do
 	@asset = Asset.find_by(id: params[:id] )
 	@user = User.find_by(id: @asset.user_id)
-	@comments = Comment.all
+	@comments = Comment.where(asset_id: @asset.id)
+	# binding.pry
 	erb :asset
 end
 
 delete '/asset' do
 	Asset.find_by(id: params[:id] ).destroy
 	redirect to("/profile/#{current_user.username}")
+end
+
+get '/chat' do
+	erb :chat
 end
