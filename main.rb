@@ -42,7 +42,7 @@ end
 
 post '/session' do
 	user = User.find_by(email: params[:email])
-	# binding.pry
+	# binding.pry	
 	if user && user.authenticate(params[:password])
 		session[:user_id] = user.id
 		redirect to("/profile/#{current_user.username}")

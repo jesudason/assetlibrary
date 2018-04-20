@@ -2,8 +2,6 @@
 <h2><%= @asset.name %></h2>
 <img src="<%= @asset.image.thumb.url %>">
 
-<!-- If current user is asset user -->
-
 <% if logged_in? && @asset.user_id == current_user.id %>
 
 	<form action="/asset" method="post">
@@ -12,15 +10,16 @@
 		<button>delete</button>
 	</form>
 
-	<% else %>
+<% else %>
 
-<p>Designed by: <a href="/profile/<%= @user.username %>"><%= @user.name %></a> </p>
+	<p>Designed by: <a href="/profile/<%= @user.username %>"><%= @user.name %></a> </p>
 
 <% end %>
 
 <p><%= @asset.description %></p>
-<a href="@asset.asset_file">Download Artwork</a>
+<a href="<%= @asset.asset_file.url %>" download>
 
+Download Artwork</a>
 
 <a href="/asset/<%= @asset.id %>/edit">edit</a>
 <form action="/comments" method="post">

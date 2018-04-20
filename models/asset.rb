@@ -23,6 +23,7 @@ end
 
 class Asset < ActiveRecord::Base
   	mount_uploader :image, ImageUploader
+  	mount_uploader :asset_file, ImageUploader
   	has_many :comments
 	belongs_to :user
 end
