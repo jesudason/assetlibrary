@@ -69,9 +69,8 @@ post '/profile' do
 end
 
 get '/profile/:username' do
-	@user = current_user
-	@assets = Asset.where(user_id: current_user.id)
-
+	@user = User.find_by(username: params[:username])
+	@assets = Asset.where(user_id: @user.id)
 	erb :profile
 end
 
