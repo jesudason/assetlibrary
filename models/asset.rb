@@ -7,7 +7,7 @@ class ImageUploader < CarrierWave::Uploader::Base
 	include Cloudinary::CarrierWave
 	# process resize_to_fit: [800, 800]
 	version :thumb do
-		process resize_to_fill: [500,500]
+		process resize_to_fill: [400,400]
 	end
 	# storage :file
 
