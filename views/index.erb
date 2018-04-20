@@ -1,12 +1,9 @@
-<section class="head">
-	<a href="/asset/new">Post New Graphic</a>
-</section>
 <section class="layout">
 	<% @assets.each do |asset| %>
-
-		<div class="assets">
-			<h1><%= asset.name %></h1>
-			<a href="/assets/<%= asset.id %>"><img src="<%= asset.image %>"></a>
+		<div class="asset">
+			<a href="/asset/<%= asset.id %>"><img src="<%= asset.image.thumb.url %>"></a>
+			<p><%= asset.name %></p>
 		</div>
 	<% end %>
+	
 </section>

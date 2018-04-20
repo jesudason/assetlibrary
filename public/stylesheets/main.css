@@ -1,0 +1,185 @@
+body {
+	/*background-color: #e6e9f0;*/
+	background-color: #eef1f5;
+}
+ 
+
+h1, h2 {
+	font-family: 'Space Mono', monospace;
+}
+
+h1 {
+	font-size: 3em;
+}
+
+h2 {
+	font-size: 2em;
+	text-transform: uppercase;
+	text-decoration: underline;	
+	text-align: center;	
+	justify-content: center;	
+}
+.about_me {
+	text-align: justify;	
+}
+
+.layout {
+	display: flex;
+		flex-wrap: wrap;
+}
+
+.asset {
+	flex-flow: column;
+
+}
+
+.navbar a {
+	display: inline-block;
+	font-family: 'Work Sans', sans-serif;
+	font-size: 1.5em;
+	color: #3d1635;
+	padding: 0 10px;
+	border-left: solid black 2px;
+}
+
+.navbar > a:last-child {
+	float: right;
+	border: none;
+	color: white;
+	padding-right: 40px;
+}
+
+.navbar > a:first-child {
+	border-left: none;
+
+}
+
+.navbar {
+	background-image: linear-gradient(to right, #eef1f5 0%, #e2c9cc 24%, #e7627d 46%, #b8235a 59%, #801357 71%, #3d1635 84%, #1c1a27 100%);
+	padding: 10px 10px;
+	overflow: hidden;
+	position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.header {
+	display: flex;
+	padding: 40px 10px;
+	justify-content: space-between;
+}
+
+.logout, .title {
+	margin-top: 40px;
+	/*position: fixed;*/
+}
+.logout {
+	float: right;
+}
+
+
+p {
+	font-family: 'Work Sans', sans-serif;
+	font-size: 1.5em;
+	font-weight: bolder;
+}
+label {
+	font-family: 'Work Sans', sans-serif;
+	font-size: 2em;
+}
+
+button {
+ 	float: right;
+	width: 15em;
+	padding: .5em 0 0;
+	border-radius: 2px;
+	box-shadow: inset 0 1px 0 hsla(255,255%,255%,0.05), inset 0 0 1px hsla(255,255%,255%,0.1), 0 4px 6px hsla(0,0%,0%,0.85), 0 1px 2px hsla(0,0%,0%,0.9);
+	color: black
+	text-transform: uppercase;
+}
+
+button:hover {
+	background: linear-gradient(to bottom, grey 15%, black 90%);
+	box-shadow: inset 0 1px 0 hsla(255,255%,255%,0.05), inset 0 0 1px hsla(255,255%,255%,0.1), 0 4px 6px hsla(0,0%,0%,0.85), 0 1px 2px hsla(0,0%,0%,0.9);
+	color: white;
+}
+
+.upload {
+	float: left;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+.loginbtn {
+	width: auto;
+	font-family: 'Work Sans', sans-serif;
+	font-size: 2em;
+}
+
+.new, .login  {
+	margin: 0 20px 0 0;
+}
+
+form {
+	font-size: 12px;
+}
+
+
+.register {
+	float: right;
+}
+
+.navbar > form > a:last-child {
+	float: right;
+	color: white;
+	border-left: none;
+	padding-right: 40px;
+}
+
+div {
+	padding: 20px;
+}
+input {
+	margin-left: 10px;	
+	height: 2.5em;
+}
+div > input {
+	margin-right: 1.5em;	
+	width: 45%;
+	position: absolute;
+	right: 0;
+}
+
+@media (min-width: 700px) {
+	div > input {
+		margin-right: 1.5em;	
+		width: 60%;
+		position: absolute;
+		right: 0;
+		height: 2.5em;
+	}	
+}
+
+@media (min-width: 1000px) {
+	div > input {
+		margin-right: 1.5em;	
+		width: 70%;
+		position: absolute;
+		right: 0;
+		height: 2.5em;
+	}	
+}
+
+@media (min-width: 1300px) {
+	div > input {
+		margin-right: 1.5em;	
+		width: 80%;
+		position: absolute;
+		right: 0;
+		height: 2.5em;
+	}	
+}
+
+
+
+

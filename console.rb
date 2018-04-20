@@ -1,4 +1,4 @@
-# require 'pry'
+require 'pry'
 require 'active_record'
 ActiveRecord::Base.logger = Logger.new(STDERR)
 
@@ -7,5 +7,7 @@ require_relative 'models/asset'
 require_relative 'models/comment'
 require_relative 'models/user'
 
-# binding.pry
+binding.pry
+
+puts "testing"
 

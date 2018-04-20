@@ -6,4 +6,5 @@ gem 'pg'
 gem 'bcrypt'
 gem 'httparty'
 gem 'pry'
-
+gem 'carrierwave'
+gem 'mini_magick'

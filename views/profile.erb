@@ -1,22 +1,13 @@
-<h1><%= @asset['name'] %></h1>
-<h2>created hy <%= @user['name'] %></h2>
-
-<img src="<%= @asset['image'] %>">
-
-<form action="/assets" method="post">
-	<input type="hidden" name="_method" value="delete">
-	<input type="hidden" name="id" value="<%= @asset['id'] %>">
-	<button>delete</button>
-
-</form>
-<a href="/assets/<%= @asset['id'] %>/edit">edit</a>
-<form action="/comments" method="post">
-	<input type="hidden" name="asset_id" value="<%= @asset['id'] %>">
-	<textarea name="content"></textarea>
-	<button>Post Comment</button>
-</form>
-
-<% @comments.each do |comment| %>
-	<p> <%= comment.content %> </p>
-	<p> <%= comment.user.username if comment.username %> </p>
-<% end %>
+<section class="about_me">
+	<h2>About <%= @user.username %></h2>
+	<p><%= @user.about_me %></p>
+	<p><a href="<%= @user.website %>"><%= @user.website %></a></p>
+</section>
+<section class="layout">
+	<% @assets.each do |asset| %>
+		<div class="asset">
+			<a href="/asset/<%= asset.id %>"><img src="<%= asset.image.thumb.url %>"></a>
+			<p class="asset_name"><%= asset.name %></p>
+		</div>
+	<% end %>
+</section>
