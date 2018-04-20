@@ -197,9 +197,9 @@ textarea {
 	font-family: 'Space Mono', monospace;	
 	color: white;
 	text-align: center;
-	font-size: 2em;
+	/*font-size: 2em;*/
 }
-.lost > a {
+a {
 	font-family: 'Space Mono', monospace;	
 	color: white;
 }
