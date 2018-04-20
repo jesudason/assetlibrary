@@ -70,7 +70,6 @@ post '/profile' do
 end
 
 put '/profile/:username' do
-	# binding.pry
 	@user = User.find_by(username: params[:username])
 	@user.username = params['username']
 	@user.email = params['email']
@@ -84,6 +83,7 @@ put '/profile/:username' do
 end
 
 get '/profile/:username' do
+		# binding.pry
 	@user = User.find_by(username: params[:username])
 	@assets = Asset.where(user_id: @user.id)
 	erb :profile

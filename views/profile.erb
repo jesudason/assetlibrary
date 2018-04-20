@@ -1,18 +1,16 @@
 <section class="about_me">
 	<h2>About <%= @user.username %></h2>
 	<p><%= @user.about_me %></p>
-	<p><a href="<%= @user.website %>"><%= @user.website %></a></p>
+	<p><a href="http://<%= @user.website %>"><%= @user.website %></a></p>
 </section>
 <section class="layout">
 	<% @assets.each do |asset| %>
 		<div class="asset">
 			<a href="/asset/<%= asset.id %>"><img src="<%= asset.image.thumb.url %>"></a>
 			<p class="asset_name"><%= asset.name %></p>
-
-
 		</div>
 	<% end %>
-		<% if current_user.id == @user.id %>
+		<% if logged_in? && current_user.id == @user.id %>
 			<a href="/profile/<%= @user.username %>/edit">edit profile</a>
 	
 		<% end %>
