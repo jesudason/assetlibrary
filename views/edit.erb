@@ -1,10 +1,29 @@
-<form action="/assets/<%= @asst['id'] %>" method="post">
+<form action="/profile/<%= current_user.username %>" method="post">
 	<input type="hidden" name="_method" value="put">
-	<label for="">name</label>
-	<input name="name" type="text" value="<%= @asset['name']%>">
-	<label for="">asset description</label>
-	<input name="description" type="text" value="<%= @asset['description']%>">
-	<label for="">file upload</label>
-	<!-- some way to upload file -->
+	<div>
+		<label for="">username (required)</label>
+		<input name="username" type="text">
+	</div>
+	<div>
+		<label for="">email (required)</label>
+		<input name="email" type="text">
+	</div>
+	<div>
+		<label for="">password (required)</label>
+		<input name="password" type="password">
+	</div>
+	<div>
+		<label for="">real name</label>
+		<input name="real_name" type="text">
+	</div>
+	<div>
+		<label for="">website</label>
+		<input name="website" type="text">
+	</div>
+	<div>
+		<label for="">about me</label>
+		<textarea style="resize:none" name="about_me" type="text"></textarea>
+		<!-- <input name="about_me" type="text"> -->
+	</div>
 	<button>update</button>
 </form>

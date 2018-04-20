@@ -67,7 +67,20 @@ post '/profile' do
 	@user.save
 	session[:user_id] = @user.id
 	redirect to("/profile/#{current_user.username}")
-	
+end
+
+put '/profile/:username' do
+	# binding.pry
+	@user = User.find_by(username: params[:username])
+	@user.username = params['username']
+	@user.email = params['email']
+	@user.password = params['password']
+	@user.name = params['real_name']
+	@user.website = params['website']
+	@user.about_me = params['about_me']
+	@user.save
+	session[:user_id] = @user.id
+	redirect to("/profile/#{current_user.username}")
 end
 
 get '/profile/:username' do
@@ -122,4 +135,9 @@ end
 not_found do
   status 404
   erb :lost
+end
+
+get '/profile/:username/edit' do
+	@user = current_user.id 
+	erb :edit
 end

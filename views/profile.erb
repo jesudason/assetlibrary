@@ -8,6 +8,12 @@
 		<div class="asset">
 			<a href="/asset/<%= asset.id %>"><img src="<%= asset.image.thumb.url %>"></a>
 			<p class="asset_name"><%= asset.name %></p>
+
+
 		</div>
 	<% end %>
+		<% if current_user.id == @user.id %>
+			<a href="/profile/<%= @user.username %>/edit">edit profile</a>
+	
+		<% end %>
 </section>

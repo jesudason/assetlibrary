@@ -19,7 +19,7 @@
 <p><%= @asset.description %></p>
 <a href="<%= @asset.asset_file%>" download> Download Artwork</a>
 
-<a href="/asset/<%= @asset.id %>/edit">edit</a>
+
 <form action="/comments" method="post">
 	<input type="hidden" name="asset_id" value="<%= @asset['id'] %>">
 	<textarea name="content"></textarea>
@@ -28,5 +28,4 @@
 
 <% @comments.each do |comment| %>
 	<p><%= User.find_by(id: comment.user_id).username %>: <%= comment.content %> </p>
-	 
 <% end %>
