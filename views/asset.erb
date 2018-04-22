@@ -1,5 +1,6 @@
 
 <h2><%= @asset.name %></h2>
+<div class="artdisplay">
 <img src="<%= @asset.image.thumb.url %>">
 
 <% if logged_in? && @asset.user_id == current_user.id %>
@@ -15,6 +16,7 @@
 	<p>Designed by: <a href="/profile/<%= @user.username %>"><%= @user.name %></a> </p>
 
 <% end %>
+</div>
 
 <p><%= @asset.description %></p>
 <a href="<%= @asset.asset_file%>" download> Download Artwork</a>

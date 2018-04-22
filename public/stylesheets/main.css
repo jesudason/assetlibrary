@@ -197,10 +197,21 @@ textarea {
 	font-family: 'Space Mono', monospace;	
 	color: white;
 	text-align: center;
+
 	/*font-size: 2em;*/
 }
 a {
 	font-family: 'Space Mono', monospace;	
-	color: white;
+	
+}
+.artdisplay {
+	display: flex;
+	align-self: center;
+	justify-content: center;
+}
+
+img {
+	/*box-shadow: 1px 1px grey;*/
+	    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 

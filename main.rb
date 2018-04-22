@@ -141,3 +141,20 @@ get '/profile/:username/edit' do
 	@user = current_user.id 
 	erb :edit
 end
+
+get '/search' do
+	# binding.pry
+	@assets = Asset.all
+	if User.find_by(name: params[:search]).present?
+		@assets = Asset.where(user_id: User.find_by(name: params[:search]).id)
+	elsif Asset.where(name: params[:search]).present?
+		@assets = Asset.where(name: params[:search])
+	else 
+		@assets = Asset.all
+	end
+	erb :index
+end
+
+
+
+
