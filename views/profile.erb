@@ -1,7 +1,7 @@
 <section class="about_me">
 	<h2>About <%= @user.username %></h2>
 	<p><%= @user.about_me %></p>
-	<p><a href="http://<%= @user.website %>"><%= @user.website %></a></p>
+	<a href="http://<%= @user.website %>"><%= @user.website %></a><br><br>
 		<% if logged_in? && current_user.id == @user.id %>
 			<a href="/profile/<%= @user.username %>/edit">edit profile</a>
 	
