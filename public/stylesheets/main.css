@@ -252,7 +252,9 @@ textarea {
 }
 	
 .artdisplay {
-	background-color: white;
+	/*background-color: white;*/
+	margin: 0 auto;
+	text-align: center;
 }
 
 img {

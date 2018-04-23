@@ -27,7 +27,6 @@ end
 get '/' do
 	@assets = Asset.all 
 	erb :index
-	# binding.pry
 end
 
 post '/' do
@@ -42,7 +41,6 @@ end
 
 post '/session' do
 	user = User.find_by(email: params[:email])
-	# binding.pry	
 	if user && user.authenticate(params[:password])
 		session[:user_id] = user.id
 		redirect to("/profile/#{current_user.username}")
@@ -57,7 +55,6 @@ delete '/session' do
 end
 
 post '/profile' do
-	binding.pry
 	@user = User.new
 	@user.username = params['username']
 	@user.email = params['email']
