@@ -1,20 +1,19 @@
-<form class="new" action="/asset" method="post" enctype="multipart/form-data">
-	<div class="asset_name">
+<section class="new">
+	
+<form action="/asset" method="post" enctype="multipart/form-data">
+	<div class="labels">
 		<label class="name"for="">name</label>
-		<input name="name" type="text">
-	</div>
-	<div class="asset_description">
 		<label class="description" for="">description</label>
-		<input id="description" name="description" type="text">
-	</div>
-	<div>
 		<label for="">Select Sample Image</label>
-		<input type="file" name="image" />
-	</div>
-	<div>
 		<label for="">Select Asset File</label>
+	</div>
+	<div class="inputs">
+		<input name="name" type="text">
+		<input id="description" name="description" type="text">
+		<input type="file" name="image" />
 		<input type="file" name="asset_file" />
 	</div>
-	<button class="upload"><p>upload</p></button>
+	<button class="upload">upload</button>
 </form>
+</section>
 

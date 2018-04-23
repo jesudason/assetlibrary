@@ -1,29 +1,20 @@
 <form action="/profile/<%= current_user.username %>" method="post">
 	<input type="hidden" name="_method" value="put">
-	<div>
+	<div class="labels">
 		<label for="">username (required)</label>
-		<input name="username" type="text">
-	</div>
-	<div>
 		<label for="">email (required)</label>
-		<input name="email" type="text">
-	</div>
-	<div>
 		<label for="">password (required)</label>
-		<input name="password" type="password">
-	</div>
-	<div>
 		<label for="">real name</label>
-		<input name="real_name" type="text">
-	</div>
-	<div>
 		<label for="">website</label>
-		<input name="website" type="text">
-	</div>
-	<div>
 		<label for="">about me</label>
+	</div>
+	<div class="inputs">
+		<input name="username" type="text">
+		<input name="email" type="text">
+		<input name="password" type="password">
+		<input name="real_name" type="text">
+		<input name="website" type="text">
 		<textarea style="resize:none" name="about_me" type="text"></textarea>
-		<!-- <input name="about_me" type="text"> -->
 	</div>
 	<button>update</button>
 </form>

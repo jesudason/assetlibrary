@@ -1,6 +1,6 @@
 
-<h2><%= @asset.name %></h2>
 <div class="artdisplay">
+<h2><%= @asset.name %></h2>
 <img src="<%= @asset.image.thumb.url %>">
 
 <% if logged_in? && @asset.user_id == current_user.id %>
@@ -20,8 +20,8 @@
 
 <p><%= @asset.description %></p>
 <a href="<%= @asset.asset_file%>" download> Download Artwork</a>
-
-
+<hr>
+<h3>Comments:</h2>
 <form action="/comments" method="post">
 	<input type="hidden" name="asset_id" value="<%= @asset['id'] %>">
 	<textarea name="content"></textarea>

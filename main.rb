@@ -57,6 +57,7 @@ delete '/session' do
 end
 
 post '/profile' do
+	binding.pry
 	@user = User.new
 	@user.username = params['username']
 	@user.email = params['email']
@@ -83,7 +84,6 @@ put '/profile/:username' do
 end
 
 get '/profile/:username' do
-		# binding.pry
 	@user = User.find_by(username: params[:username])
 	@assets = Asset.where(user_id: @user.id)
 	erb :profile
@@ -119,7 +119,6 @@ get '/asset/:id' do
 	@asset = Asset.find_by(id: params[:id] )
 	@user = User.find_by(id: @asset.user_id)
 	@comments = Comment.where(asset_id: @asset.id)
-	# binding.pry
 	erb :asset
 end
 
@@ -143,7 +142,6 @@ get '/profile/:username/edit' do
 end
 
 get '/search' do
-	# binding.pry
 	@assets = Asset.all
 	if User.find_by(name: params[:search]).present?
 		@assets = Asset.where(user_id: User.find_by(name: params[:search]).id)
