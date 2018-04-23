@@ -55,6 +55,7 @@ p {
 		background-color: #FFCB9A;
 	padding-left: 30px;
 	color: black;
+	font-family: 'Work Sans', sans-serif;
 }
 
 .navbar {
@@ -67,6 +68,7 @@ nav a {
 	color: white;
 	padding: 0 10px;
 	border-left: solid black 2px;
+	font-family: 'Work Sans', sans-serif;
 }
 
 nav a:first-child {
@@ -187,7 +189,6 @@ form {
 
 
 div > input {
-
 	font-size: 14px;	
 }
 
@@ -266,14 +267,17 @@ img {
 	padding: 10px 10px 30px 10px;
 	margin-bottom: 20px;
 	color: white;
+	font-family: 'Work Sans', sans-serif;
 }
 
 .about_me > a {
 	color: white;
+	font-family: 'Work Sans', sans-serif;
 }
 
 .about_me > h2 {
 	color: #D9B08C
+	font-family: 'Work Sans', sans-serif;
 }
 
 .search {
@@ -281,6 +285,11 @@ img {
 	padding: 10px 10px 20px 10px;
 	background-color: #116466;
 	color: white;
+	font-family: 'Work Sans', sans-serif;
+}
+
+a {
+	font-family: 'Work Sans', sans-serif;
 }
 .search form > input {
 	background-color: white;
@@ -291,6 +300,7 @@ img {
 
 .about_me > a:last-child {
 	color: #D9B08C;
+	font-family: 'Work Sans', sans-serif;
 }
 
 main {
